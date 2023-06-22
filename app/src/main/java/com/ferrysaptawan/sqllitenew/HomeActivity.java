@@ -1,9 +1,12 @@
 package com.ferrysaptawan.sqllitenew;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import com.google.android.material.tabs.TabLayout;
@@ -18,13 +21,34 @@ public class HomeActivity extends AppCompatActivity {
     private LinearLayout indicatorLayout;
     private Timer timer;
     private int currentPage = 0;
-    private final long DELAY_MS = 3000; // Waktu tunda antara perpindahan gambar (dalam milidetik)
-    private final long PERIOD_MS = 5000; // Waktu total untuk perpindahan gambar (dalam milidetik)
+    private final long DELAY_MS = 3000, PERIOD_MS = 5000;
+
+    Button mahasiswa, data_buku;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        mahasiswa = findViewById(R.id.btnMahasiswa);
+        data_buku = findViewById(R.id.btndatabuku);
+
+        mahasiswa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MahasiswaActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        data_buku.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), BukuActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         viewPager = findViewById(R.id.imageSlider);
         indicatorLayout = findViewById(R.id.indicatorLayout);
@@ -37,9 +61,11 @@ public class HomeActivity extends AppCompatActivity {
 
     private List<Integer> getImageList() {
         List<Integer> imageList = new ArrayList<>();
-        imageList.add(R.drawable.image1);
+        imageList.add(R.drawable.image);
         imageList.add(R.drawable.image2);
         imageList.add(R.drawable.image3);
+        imageList.add(R.drawable.image4);
+        imageList.add(R.drawable.image5);
         return imageList;
     }
 
