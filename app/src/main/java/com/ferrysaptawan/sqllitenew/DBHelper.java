@@ -75,4 +75,16 @@ public class DBHelper extends SQLiteOpenHelper {
 
         return exists;
     }
+
+    public Cursor tampildata2() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.rawQuery("SELECT * FROM users", null);
+    }
+
+    public boolean deleteData2(String user) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        int result = db.delete("users", "username=?", new String[]{user});
+        db.close();
+        return result > 0;
+    }
 }

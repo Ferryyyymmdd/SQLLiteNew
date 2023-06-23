@@ -33,9 +33,10 @@
         android:layout_height="50dp"
         android:background="@drawable/edittextbg"
         android:hint="Username"
+        android:textStyle="bold"
         android:textSize="20sp"
         android:textColorHint="#50D38988"
-        android:textColor="#000000"
+        android:textColor="#DF798F"
         android:paddingLeft="20dp"
         android:layout_marginBottom="20dp" />
 
@@ -45,9 +46,10 @@
         android:layout_height="50dp"
         android:background="@drawable/edittextbg"
         android:hint="Password"
+        android:textStyle="bold"
         android:textSize="20sp"
         android:textColorHint="#50D38988"
-        android:textColor="#000000"
+        android:textColor="#DF798F"
         android:paddingLeft="20dp"
         android:layout_marginBottom="20dp" />
 
@@ -57,9 +59,10 @@
         android:layout_height="50dp"
         android:background="@drawable/edittextbg"
         android:hint="Confirm Password"
+        android:textStyle="bold"
         android:textSize="20sp"
         android:textColorHint="#50D38988"
-        android:textColor="#000000"
+        android:textColor="#DF798F"
         android:paddingLeft="20dp"
         android:layout_marginBottom="20dp" />
 
@@ -72,18 +75,19 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/signup"
             android:layout_width="60pt"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:background="@drawable/buttonbg"
             android:text="Sign Up"
             android:textSize="15sp"
             android:textColor="#fff"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="10dp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/haveaccount"
             android:layout_width="60pt"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:background="@drawable/buttonbg"
             android:text="Have Account"
             android:textSize="15sp"

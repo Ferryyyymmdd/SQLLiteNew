@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/bg1"
+    tools:context=".BiodataActivity">
+
+    <EditText
+        android:id="@+id/edtnim2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="NIM"
+        android:textSize="15dp"
+        android:textColorHint="#80D38988"
+        android:paddingLeft="20dp"
+        android:textColor="#DD7B69"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
+
+
+    <Button
+        android:id="@+id/btnhapus2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="#DE5880"
+        android:padding="10dp"
+        android:text="HAPUS" />
+
+    <TextView
+        android:id="@+id/textViewData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#DD7B69"
+        android:layout_marginTop="120dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+</RelativeLayout>

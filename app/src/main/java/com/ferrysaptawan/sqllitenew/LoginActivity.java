@@ -4,6 +4,7 @@ package com.ferrysaptawan.sqllitenew;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -14,7 +15,7 @@ import android.widget.Toast;
 public class LoginActivity extends AppCompatActivity {
 
     EditText username, password;
-    Button btnSignIn;
+    Button btnSignIn, btnrahasia;
 
     DBHelper DB;
 
@@ -26,6 +27,8 @@ public class LoginActivity extends AppCompatActivity {
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         btnSignIn = findViewById(R.id.signin);
+        btnrahasia = findViewById(R.id.rahasia);
+
 
         DB = new DBHelper(this);
 
@@ -48,6 +51,20 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(LoginActivity.this, "Login Gagal. Username atau Password Salah", Toast.LENGTH_SHORT).show();
                     }
                 }
+            }
+        });
+
+        btnrahasia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Cursor res = DB.tampildata2();
+                if (res.getCount() == 0) {
+                    Toast.makeText(LoginActivity.this, "Tidak Ada Data", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                Intent intent = new Intent(getApplicationContext(), DataLoginActivity.class);
+                startActivity(intent);
             }
         });
     }
