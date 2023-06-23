@@ -43,8 +43,5 @@
             android:layout_below="@+id/edtnim2"
             android:text="HAPUS" />
 
-        <!-- Tambahkan elemen-elemen UI lainnya di sini -->
-        <!-- Sesuaikan posisi dan atributnya sesuai kebutuhan -->
-
     </RelativeLayout>
 </ScrollView>
